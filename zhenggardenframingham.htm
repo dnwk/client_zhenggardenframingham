@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Zheng Garden Restaurant : Zheng Garden, Zheng Garden Restaurant</title>
+  <meta name="keywords" content="Appetizers Soup Fried Rice Lo Mein Mei Fun(Rice Stick Noodle) Chou Fun(Flat Rice Noodle) Chow Mein Poultry Beef Vegetables Seafood Sweet &amp; Sour The lighter side Chef's Specials Combination Platters Chop Suey Catering Chinese food, Zheng Garden Restaurant  Zheng Garden Restaurant">
+  <meta name="description" content="Zheng Garden : Zheng Garden Restaurant - Appetizers Soup Fried Rice Lo Mein Mei Fun(Rice Stick Noodle) Chou Fun(Flat Rice Noodle) Chow Mein Poultry Beef Vegetables Seafood Sweet &amp; Sour The lighter side Chef's Specials Combination Platters Chop Suey Catering Chinese food, Zheng Garden Restaurant ">
+  <meta name="author" content="Zheng Garden Chinese Restaurant">
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+
+  <!-- base href="https://www.zhenggardenframingham.com/shop/" -->
+  <link rel="canonical" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=down_for_maintenance">
+
+<link rel="stylesheet" type="text/css" href="zhenggardenframingham_files/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="zhenggardenframingham_files/stylesheet_colors.css">
+<link rel="stylesheet" type="text/css" href="zhenggardenframingham_files/stylesheet_css_buttons.css">
+<link rel="stylesheet" type="text/css" media="print" href="zhenggardenframingham_files/print_stylesheet.css">
+
+<script type="text/javascript">window.jQuery || document.write(unescape('%3Cscript type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"%3E%3C/script%3E'));</script><script type="text/javascript" src="zhenggardenframingham_files/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript">window.jQuery || document.write(unescape('%3Cscript type="text/javascript" src="includes/templates/responsive_classic/jscript/jquery.min.js"%3E%3C/script%3E'));</script>
+
+<script type="text/javascript" src="zhenggardenframingham_files/jscript_matchHeight-min.js"></script>
+<script type="text/javascript"><!--//<![CDATA[
+if (typeof zcJS == "undefined" || !zcJS) {
+  window.zcJS = { name: 'zcJS', version: '0.1.0.0' };
+};
+
+zcJS.ajax = function (options) {
+  options.url = options.url.replace("&amp;", unescape("&amp;"));
+  var deferred = jQuery.Deferred(function (d) {
+      var securityToken = 'a6662d18714e5c8e0e988a47fa60975c';
+      var defaults = {
+          cache: false,
+          type: 'POST',
+          traditional: true,
+          dataType: 'json',
+          timeout: 5000,
+          data: jQuery.extend(true,{
+            securityToken: securityToken
+        }, options.data)
+      },
+      settings = jQuery.extend(true, {}, defaults, options);
+      if (typeof(console.log) == 'function') {
+          console.log( settings );
+      }
+
+      d.done(settings.success);
+      d.fail(settings.error);
+      d.done(settings.complete);
+      var jqXHRSettings = jQuery.extend(true, {}, settings, {
+          success: function (response, textStatus, jqXHR) {
+            d.resolve(response, textStatus, jqXHR);
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+              if (window.console) {
+                if (typeof(console.log) == 'function') {
+                  console.log(jqXHR);
+                }
+              }
+              d.reject(jqXHR, textStatus, errorThrown);
+          },
+          complete: d.resolve
+      });
+      jQuery.ajax(jqXHRSettings);
+   }).fail(function(jqXHR, textStatus, errorThrown) {
+   var response = jqXHR.getResponseHeader('status');
+   var responseHtml = jqXHR.responseText;
+   var contentType = jqXHR.getResponseHeader("content-type");
+   switch (response)
+     {
+       case '403 Forbidden':
+         var jsonResponse = JSON.parse(jqXHR.responseText);
+         var errorType = jsonResponse.errorType;
+         switch (errorType)
+         {
+           case 'ADMIN_BLOCK_WARNING':
+           break;
+           case 'AUTH_ERROR':
+           break;
+           case 'SECURITY_TOKEN':
+           break;
+
+           default:
+             alert('An Internal Error of type '+errorType+' was received while processing an ajax call. The action you requested could not be completed.');
+         }
+       break;
+       default:
+        if (jqXHR.status === 200) {
+            if (contentType.toLowerCase().indexOf("text/html") >= 0) {
+                document.open();
+                document.write(responseHtml);
+                document.close();
+            }
+         }
+     }
+   });
+
+  var promise = deferred.promise();
+  return promise;
+};
+zcJS.timer = function (options) {
+  var defaults = {
+    interval: 10000,
+    startEvent: null,
+    intervalEvent: null,
+    stopEvent: null
+
+},
+  settings = jQuery.extend(true, {}, defaults, options);
+
+  var enabled = new Boolean(false);
+  var timerId = 0;
+  var mySelf;
+  this.Start = function()
+  {
+      this.enabled = new Boolean(true);
+
+      mySelf = this;
+      mySelf.settings = settings;
+      if (mySelf.enabled)
+      {
+          mySelf.timerId = setInterval(
+          function()
+          {
+              if (mySelf.settings.intervalEvent)
+              {
+                mySelf.settings.intervalEvent(mySelf);
+              }
+          }, mySelf.settings.interval);
+          if (mySelf.settings.startEvent)
+          {
+            mySelf.settings.startEvent(mySelf);
+          }
+      }
+  };
+  this.Stop = function()
+  {
+    mySelf.enabled = new Boolean(false);
+    clearInterval(mySelf.timerId);
+    if (mySelf.settings.stopEvent)
+    {
+      mySelf.settings.stopEvent(mySelf);
+    }
+  };
+};
+
+//]] --></script>
+
+
+<script type="text/javascript"><!--//
+
+(function($) {
+$(document).ready(function() {
+
+$('#contentMainWrapper').addClass('onerow-fluid');
+ $('#mainWrapper').css({
+     'max-width': '100%',
+     'margin': 'auto'
+ });
+ $('#headerWrapper').css({
+     'max-width': '100%',
+     'margin': 'auto'
+ });
+ $('#navSuppWrapper').css({
+     'max-width': '100%',
+     'margin': 'auto'
+ });
+
+
+$('.leftBoxContainer').css('width', '');
+$('.rightBoxContainer').css('width', '');
+$('#mainWrapper').css('margin', 'auto');
+
+$('a[href="#top"]').click(function(){
+$('html, body').animate({scrollTop:0}, 'slow');
+return false;
+});
+
+$(".categoryListBoxContents").click(function() {
+window.location = $(this).find("a").attr("href"); 
+return false;
+});
+
+$('.centeredContent').matchHeight();
+$('.specialsListBoxContents').matchHeight();
+$('.centerBoxContentsAlsoPurch').matchHeight();
+$('.categoryListBoxContents').matchHeight();
+
+$('.no-fouc').removeClass('no-fouc');
+});
+
+}) (jQuery);
+
+//--></script>
+
+
+<link rel="stylesheet" type="text/css" href="zhenggardenframingham_files/responsive.css"><link rel="stylesheet" type="text/css" href="zhenggardenframingham_files/responsive_default.css">  <script type="text/javascript">document.documentElement.className = 'no-fouc';</script>
+<link rel="stylesheet" type="text/css" href="zhenggardenframingham_files/font-awesome.min.css">
+</head>
+
+
+<body id="downformaintenanceBody">
+
+
+
+<div id="mainWrapper" style="max-width: 100%; margin: auto;">
+
+
+
+<!--bof-header logo and navigation display-->
+
+<div id="headerWrapper" style="max-width: 100%; margin: auto;">
+
+<!--bof navigation display-->
+<div id="navMainWrapper" class="group onerow-fluid">
+
+<div id="navMain">
+  <ul class="back">
+    <li><a href="https://www.zhenggardenframingham.com/shop/">Home</a></li>
+
+    <li class="last"><a href="https://www.zhenggardenframingham.com/shop/index.php?main_page=login">Log In</a></li>
+
+  </ul>
+<div id="navMainSearch" class="forward"></div>
+</div>
+</div>
+<!--eof navigation display-->
+
+
+<!--bof branding display-->
+<div id="logoWrapper" class="group onerow-fluid">
+    <div id="logo"><a href="https://www.zhenggardenframingham.com/shop/"><img src="zhenggardenframingham_files/garden2.png" alt="Zheng Garden Restaurant" title=" Zheng Garden Restaurant " width="280px" height="HEADER_LOGO_HEIGHT"></a>    <div id="taglineWrapper">
+      <div id="tagline">Zheng Garden Restaurant</div>
+  </div>
+  </div>
+</div>
+
+<!--eof branding display-->
+<!--eof header logo and navigation display-->
+
+
+<!--bof optional categories tabs navigation display-->
+<div id="navCatTabsWrapper">
+<div id="navCatTabs">
+
+</div>
+</div>
+<!--eof optional categories tabs navigation display-->
+
+<!--bof header ezpage links-->
+<!--eof header ezpage links-->
+</div>
+
+
+<div id="contentMainWrapper" class="onerow-fluid">
+
+  <div class="col160">
+<!--// bof: categories //-->
+<div class="leftBoxContainer" id="categories" style="">
+<h3 class="leftBoxHeading" id="categoriesHeading">Menus</h3>
+<div id="categoriesContent" class="sideBoxContent"><ul class="list-links">
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=20">Catering<span class="forward cat-count">&nbsp;(20)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=1">Appetizers<span class="forward cat-count">&nbsp;(17)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=2">Soup<span class="forward cat-count">&nbsp;(3)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=3">Fried Rice<span class="forward cat-count">&nbsp;(9)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=4">Lo Mein<span class="forward cat-count">&nbsp;(8)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=5">Mei Fun(Rice Stick Noodle)<span class="forward cat-count">&nbsp;(8)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=6">Chou Fun(Flat Rice Noodle)<span class="forward cat-count">&nbsp;(7)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=19">Chop Suey<span class="forward cat-count">&nbsp;(7)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=8">Chow Mein<span class="forward cat-count">&nbsp;(7)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=10">Poultry<span class="forward cat-count">&nbsp;(14)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=11">Beef<span class="forward cat-count">&nbsp;(11)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=13">Vegetables<span class="forward cat-count">&nbsp;(10)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=14">Seafood<span class="forward cat-count">&nbsp;(11)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=15">Sweet &amp; Sour<span class="forward cat-count">&nbsp;(2)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=16">The lighter side<span class="forward cat-count">&nbsp;(5)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=17">Chef's Specials<span class="forward cat-count">&nbsp;(14)</span></a></li>
+<li><a class="category-top" href="https://www.zhenggardenframingham.com/shop/index.php?main_page=index&amp;cPath=18">Combination Platters<span class="forward cat-count">&nbsp;(20)</span></a></li>
+</ul></div></div>
+<!--// eof: categories //-->
+
+  </div>
+
+
+  <div class="col650">
+
+<!-- bof  breadcrumb -->
+    <div id="navBreadCrumb">  <a href="https://www.zhenggardenframingham.com/shop/">Home</a>&nbsp;::&nbsp;
+Zheng Garden Restaurant
+</div>
+<!-- eof breadcrumb -->
+
+
+<!-- bof upload alerts -->
+<!-- eof upload alerts -->
+
+<!-- body_text //-->
+<div class="centerColumn" id="maintenanceDefault">
+
+<h1 id="maintenanceDefaultHeading">Zheng Garden Restaurant - Not accepting online orders</h1>
+
+<div class="forward"><img src="zhenggardenframingham_files/Untitled.htm" alt=""></div>
+
+<h2 id="maintenanceDefaultMainContent"> Currently, we are not accepting online orders.</h2>
+
+<h3 id="maintenanceDefaultPeriod">Please check back later. Sorry for the inconvenience.</h3>
+<br class="clearBoth">
+
+<div class="buttonRow forward"></div>
+<br class="clearBoth">
+
+<br class="clearBoth">
+<!-- body_text_eof //-->
+</div>
+
+  </div>
+
+
+  <div class="col160">
+<!--// bof: editablesidebox //-->
+<div class="rightBoxContainer" id="editablesidebox" style="">
+<h3 class="rightBoxHeading" id="editablesideboxHeading">More Information</h3>
+<div id="editablesideboxContent" class="sideBoxContent"><p><font size="3" color="red">Online Order Attention:</font><br>Since
+ Email system takes time to deliver confirmation email, please call 
+508-877-8877 if you did not receive processing confirmation within 20-25
+ minutes. </p>
+<p>Also, please allow 45-60 minutes for deliver and 20-25 minutes for walk-in</p>
+<p>We are sorry for any inconvenience.</p> 
+</div></div>
+<!--// eof: editablesidebox //-->
+
+  </div>
+
+
+</div>
+
+
+<style>
+    ul#productDetailsList{
+        display:none;
+    }
+</style>
+<!--bof-navigation display -->
+<div id="navSuppWrapper" style="max-width: 100%; margin: auto;">
+<div id="navSupp">
+<ul>
+<li><a href="https://www.zhenggardenframingham.com/shop/">Home</a></li>
+</ul>
+</div>
+</div>
+<!--eof-navigation display -->
+
+<!--bof-ip address display -->
+<!--eof-ip address display -->
+
+<!--bof-banner #5 display -->
+<!--eof-banner #5 display -->
+
+<!--bof- site copyright display -->
+<div id="siteinfoLegal" class="legalCopyright"><h3 style="color:#fff">Zheng Garden Chinese Restaurant</h3><p>847 Edgell Road
+<br>Framingham,MA 01701<br>TEL: 508-877-8877 <br>FAX: 508-877-2008</p> </div>
+<!--eof- site copyright display -->
+
+
+
+</div>
+<!--bof- parse time display -->
+<!--eof- parse time display -->
+<!--bof- banner #6 display -->
+<!--eof- banner #6 display -->
+
+
+
+
+ 
+
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8fadbb413ee37cfe',t:'MTczNTY4NDQwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
+
+</body></html>
